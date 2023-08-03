@@ -12,23 +12,3 @@
     right: 100px;
     transform: translate(0, -50%);
 }
-
-/* 平板设备 */
-@media (max-width: 768px) {
-    .nav-container {
-        /* 在平板设备上应用的样式 */
-        top: 50px;
-        right: 50px;
-        /* 可以根据需要修改其他样式 */
-    }
-}
-
-/* 手机设备 */
-@media (max-width: 480px) {
-    .nav-container {
-        /* 在手机设备上应用的样式 */
-        top: 20px;
-        right: 20px;
-        /* 可以根据需要修改其他样式 */
-    }
-}
