@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function changeBackgroundColor() {
         const colors = [
-            "#CCE8CF", 
+            "#FFFFFF", 
             "#C7EDCC", 
             "#6E7B6C"
         ]; // 减少颜色数量
