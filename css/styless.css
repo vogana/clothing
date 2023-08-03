@@ -17,7 +17,7 @@
 
 	/* 设置切换按钮样式，绝对定位到内容区域右边缘并向下偏移 400px */
 #toggleBtn {
-  font-size: 14px; /* 添加字体大小 */
+  font-size: 20px; /* 添加字体大小 */
   background-color: rgba(0,0,0,0.18); /* 添加背景色 */
   color: white; /* 文字颜色为白色 */
   padding: 5px 10px; /* 添加内边距 */
