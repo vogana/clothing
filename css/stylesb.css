@@ -5,10 +5,10 @@
     padding: 0px 0px;
     border: none;
     cursor: pointer;
-    width: 25px;
+    width: 100px;
     height: 19px;
     position: fixed;
     top: auto;
-    right: 0;
+    right: 35px;
     transform: translate(0, -50%);
 }
