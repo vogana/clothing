@@ -11,22 +11,22 @@
   padding: 20px;
   box-sizing: border-box;
   position: fixed; /* 使用 fixed 定位 */
-  top: 400px; /* 距顶部 400px */
+  top: 300px; /* 距顶部 300px */
   right: 0; /* 靠右边边缘 */
 }
 
 	/* 设置切换按钮样式，绝对定位到内容区域右边缘并向下偏移 400px */
 #toggleBtn {
   font-size: 14px; /* 添加字体大小 */
-  background-color: #007bff; /* 添加背景色 */
+  background-color: rgba(0,0,0,0.18); /* 添加背景色 */
   color: white; /* 文字颜色为白色 */
   padding: 5px 10px; /* 添加内边距 */
   border: none; /* 去掉边框 */
   cursor: pointer; /* 鼠标悬停时显示指针 */
-  width: 50px;
+  width: 20px;
   height: 50px;
   position: fixed; /* 使用 fixed 定位 */
-  top: 630px; /* 距顶部 400px */
+  top: 530px; /* 距顶部 530px */
   right: 0; /* 靠右边缘 */
   transform: translate(0, -50%); /* 使用平移来垂直居中 */
 }
