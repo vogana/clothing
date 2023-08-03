@@ -20,13 +20,13 @@
   font-size: 20px; /* 添加字体大小 */
   background-color: rgba(0,0,0,0.18); /* 添加背景色 */
   color: white; /* 文字颜色为白色 */
-  padding: 5px 10px; /* 添加内边距 */
+  padding: 0px 0px; /* 添加内边距 */
   border: none; /* 去掉边框 */
   cursor: pointer; /* 鼠标悬停时显示指针 */
   width: 20px;
   height: 50px;
   position: fixed; /* 使用 fixed 定位 */
-  top: 530px; /* 距顶部 530px */
+  top: 400px; /* 距顶部 400px */
   right: 0; /* 靠右边缘 */
   transform: translate(0, -50%); /* 使用平移来垂直居中 */
 }
