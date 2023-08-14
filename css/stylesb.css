@@ -11,8 +11,3 @@
     top: auto;
     right: 35px;
     transform: translate(0, -50%);
-}
-.card-text:last-child {
-  margin-bottom: 0;
-  font-size: 13px;
-}
