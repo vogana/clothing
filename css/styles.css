@@ -4,29 +4,34 @@ body, h1, p, ul, li {
     padding: 0;
 }
 
-/* 设置微软雅黑字体和颜色 */
-
-a {
-    text-decoration: none;
-}
-
 body {
     font-family: "微软雅黑", sans-serif;
     color: #333; /* 文本颜色 */
-	
 }
+
 #backToTopBtn {
     position: fixed;
     bottom: 50px;
     right: 30px;
     padding: 8px 10px;
-    background-color: rgba(0,0,0,0.18);
+    background-color: rgba(143,195,53,0.45);
     color: #fff;
     border: none;
     cursor: pointer;
 }
-
-
+/* 导航字体链接 */
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
 /* 头部样式 */
 .header {
     background-color: #333;
@@ -35,7 +40,6 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-	
 }
 
 .navbar {
@@ -46,8 +50,11 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     background-color: #333; /* 导航栏背景颜色 */
-	
-	
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
@@ -55,10 +62,15 @@ body {
     height: auto;
 }
 
+.logo-text {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
-	
+    padding-left: 30%; /* 往右偏移 10px */
 }
 
 .nav-links li {
@@ -72,17 +84,70 @@ body {
     font-size: 14px; /* 字体大小 */
 }
 
-/* 内容样式 */
-
-.vogana01 {
-    height: 60px;
-    font-size: 14px; /* 字体大小 */
+/* 电脑样式 */
+@media (min-width: 1024px) {
+    .menu-icon {
+        display: none;
+    }
 }
+
+/* 平板和手机共享样式 */
+@media screen and (max-width: 1023px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;/* 字体行高 */
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* 全局样式重置/设置相册容器样式 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* 设置图片样式 */
+.image {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 内容样式 */
+.vogana01 {
+    height: 75px;
+}
+
 .vogana02 {
     height: 100%;
     font-size: 16px; /* 字体大小 */
-    color: #000000; /* 文本颜色 */	
-	
+    color: #000000; /* 文本颜色 */
 }
 
 .content {
@@ -91,9 +156,6 @@ body {
     padding: 0 20px;
     font-size: 16px; /* 字体大小 */
     color: #555; /* 文本颜色 */
-
-	
-	
 }
 
 /* 底部样式 */
@@ -105,22 +167,58 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    font-size: 14px; /* 字体大小 */
-	color: #555; /* 文本颜色 */
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-right: 60px;
+}
+
+.menu-list li:last-child {
+    margin-right: 0;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu-list a:hover {
+    color: #ff9800; /* 鼠标悬停时的颜色 */
 }
 
 /* 媒体查询：电脑 */
 @media screen and (min-width: 1024px) {
     .content {
-    font-size: 18px;
-    height: 30px;
+        font-size: 18px;
+    }
+
+    .image {
+        flex-basis: calc(33.33% - 10px); /* 每行三张图片，每张图片占据1/3的宽度 */
     }
 }
 
-/* 媒体查询：平板 */
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+/* 媒体查询：平板和手机共享样式 */
+@media screen and (max-width: 1023px) {
     .content {
         font-size: 16px;
+    }
+
+    .image {
+        flex-basis: calc(50% - 10px); /* 每行两张图片，每张图片占据1/2的宽度 */
     }
 }
 
@@ -128,5 +226,30 @@ body {
 @media screen and (max-width: 767px) {
     .content {
         font-size: 16px;
+    }
+
+    .image {
+        flex-basis: 100%; /* 每行一张图片，每张图片占据100%的宽度 */
+    }
+}
+
+/* 媒体查询：电脑 */
+@media screen and (min-width: 1024px) {
+    .mobile-content {
+        display: none;
+    }
+}
+
+/* 媒体查询：平板 */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .desktop-content {
+        display: none;
+    }
+}
+
+/* 媒体查询：手机 */
+@media screen and (max-width: 767px) {
+    .desktop-content {
+        display: none;
     }
 }
