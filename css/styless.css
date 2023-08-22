@@ -44,7 +44,5 @@ a {
 
 /* 鼠标经过链接时的样式 */
 a:hover {
-    transform: scale(1.03); /* 鼠标经过放大 3% */
-    border-bottom-width: 0.5px;
-    border-bottom-color: #8A8A8A;
+    transform: scale(1.03);
 }
